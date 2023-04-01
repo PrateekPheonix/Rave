@@ -39,8 +39,9 @@ const Home = () => {
                         'Content-Type': 'application/json'
                     }
                 })
-
-                if (response.statusText === "OK") {
+                console.log(response)
+                if (response.status === 200) {
+                    console.log("sajn")
                     setAllPosts(response.data.data.reverse())
                 }
             } catch (error) {
@@ -53,6 +54,8 @@ const Home = () => {
 
         fetchPost()
     }, [])
+
+    console.log(allPosts)
 
     const handleSearchChange = (e) => {
         clearTimeout(searchTimeout)
