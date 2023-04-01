@@ -24,7 +24,7 @@ const CreatePost = () => {
         if (form.prompt) {
             try {
                 setGeneratingImg(true)
-                const response = await axios.post('http://localhost:5000/api/ai', {
+                const response = await axios.post('https://raveai.onrender.com/api/ai', {
                     prompt: form.prompt
                 }, {
                     headers: {
@@ -52,7 +52,7 @@ const CreatePost = () => {
             setLoading(true)
 
             try {
-                const response = await axios.post('http://localhost:5000/api/post', form, {
+                const response = await axios.post('https://raveai.onrender.com/api/post', form, {
                     headers: {
                         'Content-Type': 'application/json'
                     }
