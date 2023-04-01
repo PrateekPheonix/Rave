@@ -7,6 +7,8 @@ import FormField from '../components/FormField'
 
 const RenderCards = ({ data, title }) => {
 
+    console.log(data)
+
     if (data?.length > 0) {
         return data.map((post) => {
             return <Card key={post._id} {...post} />
